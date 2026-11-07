@@ -1,0 +1,131 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    padding: 35px 30px;
+    border-radius: 18px;
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.container header {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.container form {
+    margin-top: 25px;
+}
+
+.input-field {
+    position: relative;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.input-field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Side-by-side layout for Expiry Date and CVV */
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+.input-field input {
+    height: 48px;
+    width: 100%;
+    outline: none;
+    border-radius: 8px;
+    padding: 0 15px;
+    border: 1px solid #d1d1d1;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+}
+
+.input-field input::placeholder {
+    color: #b5b5b5;
+}
+
+/* Extra left padding on Card Number input to make room for the card icon */
+.input-field input.card-number {
+    padding-left: 42px;
+}
+
+.input-field .card-icon {
+    position: absolute;
+    left: 14px;
+    top: 52px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+}
+
+/* Red border when input has the invalid class */
+.input-field input.invalid {
+    border-color: #d93025;
+}
+
+/* Default state for error messages */
+.input-field .error {
+    display: none;
+    align-items: center;
+    margin-top: 6px;
+    color: #d93025;
+    font-size: 12px;
+}
+
+/* Show error message when input has the invalid class */
+.input-field input.invalid + .error,
+.input-field input.invalid ~ .error {
+    display: flex;
+}
+
+.error .error-icon {
+    margin-right: 6px;
+    font-size: 15px;
+}
+
+.button {
+    margin: 25px 0 0;
+}
+
+.button input {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #1a1a1a;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 50px;
+}
+
+.button input:hover {
+    background-color: #333;
+}
